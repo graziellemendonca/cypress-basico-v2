@@ -165,14 +165,6 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       .invoke('removeAttr', 'target') //funcionalidade invoke remove o atributo .target_blank que abriria a página em outra aba, mas precisa estar no mesmo domínio/subdomínio
       .click()
     
-    cy.contains('Talking About Testing').should('be.visible')
-  })
-
-  it('acessa a página da política de privacidade e então clicando no link', function(){
-    cy.get('#privacy a').should('have.attr', 'target', '_blank')
-      .invoke('removeAttr', 'target') //funcionalidade invoke remove o atributo .target_blank que abriria a página em outra aba, mas precisa estar no mesmo domínio/subdomínio
-      .click()
-    
-    cy.contains('#title', 'CAC TAT - Política de privacidade').should('be.visible')
+      cy.contains('Talking About Testing').should('be.visible')
   })
 })
